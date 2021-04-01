@@ -1,0 +1,165 @@
+{
+    "bg": "background.jpg",
+    "title": "Você conhece Black Pink?",
+    "image": "banner-pink.jpg",
+    "description": "Um quiz rápido.",
+    "questions": [
+      {
+        "image": "Pinkgif01.gif",
+        "title": "Qual seria o nome da banda se não fosse Black Pink?",
+        "description": "Pergunta fácil em!",
+        "answer": 0,
+        "correct": "correta: Pink Punk",
+        "alternatives": [
+          "Pink Punk",
+          "Show Pink",
+          "Bright Pink",
+          "Seoul Pink"
+        ]
+      },
+      {
+        "image": "1.jpg",
+        "title": "Antes de embarcar no ramo da música onde ele trabalhava?",
+        "description": "E agora? Você sabe?",
+        "answer": 3,
+        "correct": "correta: Na Padaria",
+        "alternatives": [
+          "No Açougue",
+          "Na Biblioteca",
+          "Na Loja do Pai",
+          "Na Padaria"
+        ]
+      },
+
+      {
+        "image": "Pinkgif02.gif",
+        "title": "Qual dessas afirmações está errada?",
+        "description": "Inusitada!",
+        "answer": 3,
+        "correct": "correta: Não namoraria uma fã",
+        "alternatives": [
+          "Ele possue 4 mamilos",
+          "Já participou de filmes de Hollywood",
+          "Escolheu o nome One Direction",
+          "Não namoraria uma fã"
+        ]
+      },
+
+      {
+        "image": "2.jpg",
+        "title": "O que ele leva ao camarim antes de cada show?",
+        "description": "Hum",
+        "answer": 0,
+        "correct": "correta: Uma vela",
+        "alternatives": [
+          "Uma vela",
+          "Sua moeda da sorte",
+          "A última carta do pai",
+          "Os presentes que recebeu"
+        ]
+      },
+
+      {
+        "image": "Pinkgif03.gif",
+        "title": "Qual seria a profissão dele se não fosse cantor?",
+        "description": "justo",
+        "answer": 2,
+        "correct": "correta: Advogado, segundo ele",
+        "alternatives": [
+          "Cirurgião",
+          "Arquiteto",
+          "Advogado",
+          "Escultor"
+        ]
+      },
+
+      {
+        "image": "3.jpg",
+        "title": "Qual a música com mais visualizações no Youtube?",
+        "description": "tururutu",
+        "answer": 0,
+        "correct": "correta: Sign of the times",
+        "alternatives": [
+          "Sign of the Times",
+          "Watermelon Sugar",
+          "Adore You",
+          "Golden"
+        ]
+      },
+
+      {
+        "image": "4.jpg",
+        "title": "Qual dessas afirmações é verdadeira?",
+        "description": "watermelon sugar ah!",
+        "answer": 3,
+        "correct": "correta: Já usou drogas",
+        "alternatives": [
+          "Nasceu em 12 de Fevereiro de 1994",
+          "Ele é capricorniano",
+          "Sabe tocar bateria",
+          "Já usou drogas"
+        ]
+      },
+
+      {
+        "image": "Pinkgif04.gif",
+        "title": "Onde ele conseguiu a tatoo Late Late?",
+        "description": "Show!",
+        "answer": 2,
+        "correct": "correta: Em um talk show",
+        "alternatives": [
+          "Comemoração pelo novo Álbum",
+          "Numa festa do Nial",
+          "Em um talk show",
+          "Na casa da namorada"
+        ]
+      },
+
+      {
+        "image": "5.jpeg",
+        "title": "Sobre o que fala as músicas do Álbum mais recente Fine Line?",
+        "description": "Hum",
+        "answer": 0,
+        "correct": "correta: solidão e sexo",
+        "alternatives": [
+          "solidão e sexo",
+          "amizades desfeitas",
+          "niilismo",
+          "traição"
+        ]
+      },
+
+      {
+        "image": "6.jpg",
+        "title": "Qual a banda que ele tem por inspiração?",
+        "description": "Hum",
+        "answer": 3,
+        "correct": "correta: Fletwood Mac",
+        "alternatives": [
+          "The Beatles",
+          "Queen",
+          "Ramones",
+          "Fletwood Mac"
+        ]
+      }
+    ],
+
+    "resultImage": "happy.gif",
+    "resultImage2st": "aham.gif",
+    "resultImage3st": "result.gif",
+    
+    "theme": {
+      "colors": {
+        "primary": "#222222",
+        "secondary": "#bb15b4",
+        "mainBg": "rgba(31, 29, 29, 0.93)",
+        "contrastText": "#fefef3",
+        "wrong": "#cF2412",
+        "success": "#4CAF50"
+      },
+      "borderRadius": "5px",
+      "quizlogo": "https://dewey.tailorbrands.com/production/brand_version_mockup_image/298/4605243298_545beea1-9f67-44b1-bd55-710f841a163d.png?cb=1612835865",
+      "quizlogo2": "https://dewey.tailorbrands.com/production/brand_version_mockup_image/792/4611444792_e5c61721-d613-4d5f-9ac5-18c9003dbb65.png?cb=1612905441"
+    }
+  }
+  

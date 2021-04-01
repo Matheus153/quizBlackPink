@@ -1,65 +1,97 @@
+import React from 'react'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styled from 'styled-components'
+import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
+/* import styles from '../styles/Mstyle.module.css' */
+
+import db from '../db.json';
+import Widget from '../src/components/Widget';
+import QuizBackground from '../src/components/quizBackground'
+import GitHubCorner from '../src/components/GitHubCorner'
+import Input from '../src/components/Input'
+import Button from '../src/components/Button'
+
+const StyledContainer = styled.div`
+  width: 100%;
+  
+  // pressetes abaixo deixam o quiz no canto superior esquerdo
+  max-width: 350px;
+  padding-top: 45px;
+  margin: auto 38%; 
+  min-height: 100vh; 
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 500px) {
+    margin: auto;
+    padding: 15px;
+    min-height: 92vh;
+  }
+`;
 
 export default function Home() {
+  const router = useRouter()
+  const [name, setName] = React.useState('')
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+    <QuizBackground backgroundImage={db.bg}>
+      
+        <Head>
+          <title>Quiz BlackPink</title>
+          <link rel="icon" href="logoPink.png" />
+        </Head>
+        <StyledContainer>
+          <Widget
+           as={motion.section}
+           transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
+           variants={{
+             show: {opacity: 1, x:'0'},
+             hidden: {opacity: 0, x:'-70%'}
+           }}
+           initial="hidden"
+           animate="show"
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <Widget.Header>
+            <h1>{db.title}</h1>
+          </Widget.Header>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+          <img src={db.image} 
+           style={{
+            width: '100%',
+            height: '150px',
+            objectFit: 'cover',
+            marginTop: '20px'
+          }}
+          alt="principal"/>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+          <Widget.Content>
+            <form onSubmit= {function(infosDoEvento) {
+                infosDoEvento.preventDefault()
+                router.push(`/quiz?name= ${name}`)
+                console.log('Fazendo uma submissão pelo react')
+
+                // router manda para a proxima página.
+              }}>
+                <Input
+                  name="nomeDoUsuario"
+                  onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
+                  placeholder="Diz aí seu nome..."
+                  value={name}
+                />
+                <Button type="submit" disabled={name.length === 0}>
+                  {`Jogar`} {/* {name } */}
+                </Button>
+              </form>
+          </Widget.Content>
+          </Widget>
+        </StyledContainer>
+        
+      <GitHubCorner projectUrl="https://github.com/Matheus153"/>
+    </QuizBackground>
+    
   )
+
 }
