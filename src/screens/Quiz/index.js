@@ -72,9 +72,10 @@ function ResultWidget({ results }) {
           lineHeight: '1.1em',
           textAlign: 'center'
         }}>
-          { score >= 8 && `Boa ${name}, você é um mestre quando o assunto é Harry Styles, acertou ${score} de 12, você é mesmo um/uma fanática! Parabéns!!`}
-          { score > 4 && score < 8 && `Você o conhece, mas não o suficiente para ser parte do Fandom. Talvez na próxima se dê melhor! :)`}
-          {score <= 4 && `É... você não foi bem. Somente ${score} acertos. Espero que consiga na próxima :)`}
+          { score >= 7 && `Boa ${name}, você é realmente fera quando o assunto é Black Pink e com certeza é um Blink! Parabéns!! :)`}
+          { score > 4 && score < 7 && `Ehh... você o conhece, mas não o suficiente para ser parte do Fandom. Talvez na próxima se dê melhor! :)`}
+          {score <= 4 && score > 1 && `É... você não foi bem. Somente ${score} acertos. Espero que consiga na próxima :)`}
+          {score <= 1 && `Essa foi péssima hein, tomara que melhore bastante na próxim! Sorte na próxima! :)`}
           
         </h5>
         
